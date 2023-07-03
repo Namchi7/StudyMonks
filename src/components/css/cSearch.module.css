@@ -1,0 +1,249 @@
+.container {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filters {
+    width: 95%;
+    max-width: 900px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.filter {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    background-color: #eeeeee;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.filterInput {
+    height: 100%;
+    width: calc(100% - 24px);
+    background-color: transparent;
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: Segoe UI;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dArrDiv {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.dArrDiv:hover {
+    cursor: pointer;
+}
+
+.downArrowIcon {
+    height: 100%;
+    width: 100%;
+}
+
+.filterDropdown {
+    width: 100%;
+    height: fit-content;
+    max-height: 140px;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    z-index: 5;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+}
+
+.filterOption {
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.filterOption:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+
+.actionBtn {
+    height: 95%;
+    width: 90px;
+    flex-shrink: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 75, 187, 0.8);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: Segoe UI;
+    font-weight: 400;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.actionBtn:hover {
+    cursor: pointer;
+}
+
+.clearDiv {
+    width: 95%;
+    max-width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.resultsDiv {
+    width: 95%;
+    max-width: 900px;
+    height: 67vh;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+    overflow-y: hidden;
+}
+
+.resultHeadings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.resultHeadings > hr {
+    height: 50%;
+    opacity: 0.5;
+}
+
+.resultHeading {
+    width: 25%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+.result {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.result > hr {
+    height: 50%;
+    opacity: 0.5;
+}
+
+.result:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.resultEntry {
+    width: 25%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Segoe UI;
+    font-size: 14px;
+    color: black;
+}
+
+.evalDiv {
+    width: 95%;
+    max-width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.evalWrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evaluationDiv {
+    width: 95%;
+    max-width: 900px;
+    height: 67vh;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+    overflow-y: hidden;
+    z-index: 10;
+}
+
+.evalDarkBG {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 9;
+}
