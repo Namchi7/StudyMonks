@@ -78,7 +78,7 @@ const candidates = [
 
 function CSearch() {
   const [filtered, setFiltered] = useState([]);
-  const { currentUser, logout } = useAuth();
+  const { currentUser } = useAuth();
   const user = currentUser ? true : false;
   const navigate = useNavigate();
 
@@ -88,9 +88,9 @@ function CSearch() {
     allDDown.forEach((dDown) => {
       dDown.style.display = "none";
     });
-    if (filterDDown.style.display === "none")
-      filterDDown.style.display = "flex";
-    else filterDDown.style.display = "none";
+    if (filterDDown.style.display === "flex")
+      filterDDown.style.display = "none";
+    else filterDDown.style.display = "flex";
   };
 
   const setSelected = (filter, value) => {
@@ -132,8 +132,12 @@ function CSearch() {
     let tempFiltered = [];
     candidates.forEach((candidate) => {
       if (
-        candidate.location === location ||
-        candidate.jobRole === jobrole ||
+        candidate.location === location &&
+        candidate.experience >= experience
+      ) {
+        tempFiltered.push(candidate);
+      } else if (
+        candidate.jobRole === jobrole &&
         candidate.experience >= experience
       ) {
         tempFiltered.push(candidate);
